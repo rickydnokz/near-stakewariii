@@ -129,6 +129,8 @@ Change the account ID and Private Key parameter accordingly, then exit nano edit
 "public_key":"ed25519:HeaBJ3xLgvZacQWmEctTeUqyfSU4SDEnEwckWxd92W2G", "secret_key": "ed25519:****" 
 }
 ```
+NOTE
+  xx is your pool name
 
 Create a service file (one command)
 
@@ -200,8 +202,10 @@ Change parametres for staking accordingly!
 
 
 ```bash
-near call 0xdexa.factory.shardnet.near  deposit_and_stake --amount 1200 --accountId 0xdexa.shardnet.near --gas=300000000000000
+near call xx.factory.shardnet.near  deposit_and_stake --amount 1200 --accountId xx.shardnet.near --gas=300000000000000
 ```
+NOTE 
+  xx is your pool name
 
 In the few epochs, you will be able to see yourself in the explorer and by typing
 
@@ -259,4 +263,9 @@ sh $HOME/nearcore/scripts/ping.sh
 
 ```bash
 cat $HOME/nearcore/logs/all.log
+```
+Deposit and Stake NEAR
+
+```bash
+near call <staking_pool_id>.factory.shardnet.near deposit_and_stake --amount 300 --accountId <accountId>.shardnet.near --gas=300000000000000
 ```
